@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:north="http://static.bucuoa.com/cutesource/schema/north"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://static.bucuoa.com/cutesource/schema/north http://static.bucuoa.com/cutesource/schema/north/north.xsd"
+	default-lazy-init="true">
+
+	<description>Spring Configuration</description>
+
+	<north:application id="ucenter" key="3dff4ad316773jhfgf" />
+	<north:registry id="registry" type="westrpc" address="127.0.0.1" />
+	<north:server id="user_center" host="127.0.0.1" port="14527" />
+
+	<north:provider id="userRpcService" server="user_center" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
+	
+</beans>
