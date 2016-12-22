@@ -38,8 +38,8 @@
 
 	<north:provider id="userRpcService" server="127.0.0.1" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
 
-	<bean id="rpcserver" class="cc.ymsoft.Framework.RpcFramework" /> 
-
+<!-- 	<bean id="rpcserver" class="cc.ymsoft.Framework.RpcFramework" /> 
+ -->
 	<aop:aspectj-autoproxy proxy-target-class="true">
 		<aop:include name="loggerInjector" />
 	</aop:aspectj-autoproxy>
