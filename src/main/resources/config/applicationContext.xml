@@ -36,10 +36,10 @@
 	<north:registry id="registry" type="westrpc" address="127.0.0.1" />
 	<north:server id="user_center" host="127.0.0.1" port="14527" />
 
-	<north:provider id="userRpcService" server="127.0.0.1" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
+	<north:provider id="userRpcService" server="127.0.0.1:14527" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
 
-<!-- 	<bean id="rpcserver" class="cc.ymsoft.Framework.RpcFramework" /> 
- -->
+	<bean id="serverStartLisenter" class="com.bucuoa.west.rpc.spring.task.ServerStartLisenter" /> 
+
 	<aop:aspectj-autoproxy proxy-target-class="true">
 		<aop:include name="loggerInjector" />
 	</aop:aspectj-autoproxy>
