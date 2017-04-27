@@ -38,20 +38,13 @@
   </filter-mapping>
   <filter>
     <filter-name>authority</filter-name>
-    <filter-class>com.ulewo.filter.AuthorityFilter</filter-class>
+    <filter-class>com.bucuoa.passport.base.filter.AuthorityFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>authority</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <servlet>
-    <servlet-name>fileUpload</servlet-name>
-    <servlet-class>com.ulewo.servlet.FileUploadServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>fileUpload</servlet-name>
-    <url-pattern>/FileUpload</url-pattern>
-  </servlet-mapping>
+
   <servlet>
     <servlet-name>spring</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

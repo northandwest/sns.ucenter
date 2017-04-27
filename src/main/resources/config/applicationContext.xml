@@ -27,23 +27,21 @@
 		</property>
 	</bean>
 
-	<context:component-scan base-package="com.ulewo">
+	<context:component-scan base-package="com.bucuoa.passport">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
 
 	<north:application id="ucenter" key="3dff4ad316773jhfgf" />
 	<north:registry id="registry" type="westrpc" address="127.0.0.1" />
-	<north:server id="user_center" host="127.0.0.1" port="14527" />
+	<north:server id="user_center" host="192.168.1.190" port="14527" />
 
-	<north:provider id="userRpcService" server="127.0.0.1:14527" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
-
-	<bean id="serverStartLisenter" class="com.bucuoa.west.rpc.spring.task.ServerStartLisenter" /> 
+	<north:provider id="userRpcService" server="192.168.1.190:14527" alias="local" interface="com.bucuoa.ucenter.api.UserRpcService" ref="userRpcServiceStub" />
 
 	<aop:aspectj-autoproxy proxy-target-class="true">
 		<aop:include name="loggerInjector" />
 	</aop:aspectj-autoproxy>
-	<bean id="loggerInjector" class="com.ulewo.service.LoggerInjector"></bean>
+	<bean id="loggerInjector" class="com.bucuoa.passport.base.LoggerInjector"></bean>
 
 	<tx:annotation-driven transaction-manager="transactionManager"
 		proxy-target-class="true" />
