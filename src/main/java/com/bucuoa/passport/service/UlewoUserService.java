@@ -31,7 +31,7 @@ import com.bucuoa.passport.base.vo.UserVo4Api;
 import com.bucuoa.passport.dao.UlewoUserDao;
 import com.bucuoa.passport.entity.SessionUser;
 import com.bucuoa.passport.entity.User;
-import com.bucuoa.ucenter.model.UlewoUser;
+import com.bucuoa.passport.model.UlewoUser;
 import com.bucuoa.west.orm.app.common.Expression;
 import com.bucuoa.west.orm.app.common.WPage;
 import com.bucuoa.west.orm.app.extend.SingleBaseService;

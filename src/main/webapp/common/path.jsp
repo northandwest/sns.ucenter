@@ -3,9 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 String port = request.getServerPort() == 80 ? "" : ":"+request.getServerPort();
-String realPath = "http://ucenter.bucuoa.com";// request.getServerName() + port + request.getContextPath(); 
+//String realPath = "http://ucenter.bucuoa.com";// request.getServerName() + port + request.getContextPath(); 
 %>
-<c:set var="realPath" value="<%=realPath %>"/>
+
+<c:set var="realPath" value="${pageContext.request.contextPath}"/>
+
 <script type="text/javascript">
 var global={};
 global.realPath="${realPath}";

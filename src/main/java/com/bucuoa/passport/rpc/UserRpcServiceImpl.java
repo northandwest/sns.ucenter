@@ -5,11 +5,11 @@ import javax.annotation.Resource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import com.bucuoa.passport.api.UserRpcService;
 import com.bucuoa.passport.base.exception.BusinessException;
 import com.bucuoa.passport.entity.User;
+import com.bucuoa.passport.model.UlewoUser;
 import com.bucuoa.passport.service.UlewoUserService;
-import com.bucuoa.ucenter.api.UserRpcService;
-import com.bucuoa.ucenter.model.UlewoUser;
 
 @Service("userRpcServiceStub")
 public class UserRpcServiceImpl implements UserRpcService {

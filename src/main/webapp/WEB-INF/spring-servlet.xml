@@ -27,8 +27,8 @@
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->     
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix=".jsp" />  
 		 
-	<bean id="springUtil" class="com.bucuoa.passport.base.utils.SpringUtil" />
-	
+<!-- 	<bean id="springUtil" class="com.bucuoa.passport.base.utils.SpringUtil" />
+ -->	
 
 
 </beans> 

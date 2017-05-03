@@ -20,7 +20,7 @@ global.type = "${type}";
 	<div class="head_con">
 		<ul class="left">
 			<li><a href="//www.bucuoa.com" class="selected1" onFocus="this.blur()">首&nbsp;页</a></li>
-			<li><a  href="${realPath}/group/all"  class="selected2" onFocus="this.blur()">群组</a></li>
-		</ul>
+<%-- 			<li><a  href="${realPath}/group/all"  class="selected2" onFocus="this.blur()">群组</a></li>
+ --%>		</ul>
 	</div>
 </div>
